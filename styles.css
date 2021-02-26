@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  width: 100%;
+  height: 1000px;
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#resizable {
+  width: 50px;
+  height: 50px;
+  /* background-color: pink; */
+  /* background-image: url("images/favicon.ico"); */
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed;
+  transition: 0.2s;
+  top: 50%;
+  left: 50%;  
+  margin-top: -25px; /* Negative half of height. */
+  margin-left: -25px; /* Negative half of width. */
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Slide 0 */
+.arrow-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+.arrow-container i {
+  color: teal;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Animation for scroll down arrows */
+@keyframes pulse {
+  0% {
+    /* box-shadow: 0 0 0 0 teal; */
+    opacity: 100%;
+    color: teal;
+  }
+  70% {
+    /* box-shadow: 0 0 0 .2rem rgba(32, 178, 170, 0); */
+    opacity: 50%;
+    color: teal;
+  }
+  100% {
+    /* box-shadow: 0 0 0 0 rgba(32, 178, 170, 0); */
+    opacity: 100%;
+    color: black;
+  }
+}
+
+/* Slide 1 */
+#slide-1 {
+  position: fixed;
+  /* top: 50%; */
+  /* left: auto;   */
+  /* margin-top: -100px; */
+  background-color: teal;
+}
